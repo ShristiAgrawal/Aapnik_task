@@ -28,16 +28,18 @@
             android:layout_height="match_parent">
 
             <TextView
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:id="@+id/tv1"/>
 
             <TextView
-
+android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:id="@+id/tv2"/>
             <TextView
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:id="@+id/tv3"/>
@@ -47,6 +49,7 @@
                 android:autoLink="web"
                 android:id="@+id/tv4"/>
             <TextView
+                android:textColor="@color/white"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:id="@+id/tv5"/>

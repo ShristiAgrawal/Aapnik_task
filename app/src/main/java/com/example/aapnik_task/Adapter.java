@@ -42,15 +42,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         Glide.with(context).load(u.getProfile_image()).into(viewHolder.i);
 
         // Glide.with(this).load("http://goo.gl/gEgYUd").into(imageView);
-viewHolder.t1.setText(String.valueOf(list.get(i).getAnswer_count()));
-viewHolder.t2.setText(u.getDisplay_name());
-viewHolder.t3.setText(list.get(i).getCreation_date());
+viewHolder.t1.setText("Answer count-"+String.valueOf(list.get(i).getAnswer_count()));
+viewHolder.t2.setText("Question owner-"+u.getDisplay_name());
+viewHolder.t3.setText("Creation date-"+list.get(i).getCreation_date());
 viewHolder.t4.setText(list.get(i).getLink());
-viewHolder.t5.setText(String.valueOf(list.get(i).getScore()));
+viewHolder.t5.setText("Score-"+String.valueOf(list.get(i).getScore()));
 if(list.get(i).isIs_answered()==true)
 
-    viewHolder.card.setCardBackgroundColor(Color.RED);
-else viewHolder.card.setCardBackgroundColor(Color.BLUE);
+    viewHolder.card.setCardBackgroundColor(Color.BLUE);
+else viewHolder.card.setCardBackgroundColor(Color.BLACK);
 
 
 
