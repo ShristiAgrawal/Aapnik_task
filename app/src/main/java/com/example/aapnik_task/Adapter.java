@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
@@ -35,6 +37,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         user u=list.get(i).getU_list();
+
+
+        Glide.with(context).load(u.getProfile_image()).into(viewHolder.i);
+
+        // Glide.with(this).load("http://goo.gl/gEgYUd").into(imageView);
 viewHolder.t1.setText(String.valueOf(list.get(i).getAnswer_count()));
 viewHolder.t2.setText(u.getDisplay_name());
 viewHolder.t3.setText(list.get(i).getCreation_date());
@@ -55,12 +62,15 @@ else viewHolder.card.setCardBackgroundColor(Color.BLUE);
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
+        ImageView i;
         CardView card;
         TextView t1,t2,t3,t4,t5;
         ImageView iv;
         public ViewHolder(@NonNull View itemView) {
 
+
             super(itemView);
+            i=itemView.findViewById(R.id.iv);
             card=itemView.findViewById(R.id.cv);
             t1=itemView.findViewById(R.id.tv1);
             t2=itemView.findViewById(R.id.tv2);

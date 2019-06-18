@@ -6,5 +6,5 @@ import retrofit2.http.Query;
 
 public interface services {
 @GET("/2.2/search")
-    Call<items> getLis(@Query("tagged") String tag,@Query("site") String s);
+    Call<items> getLis(@Query("tagged") String tag,@Query("site") String s,@Query("sort") String sort);
 }
